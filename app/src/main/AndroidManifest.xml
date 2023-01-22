@@ -13,6 +13,13 @@
         android:theme="@style/Theme.LearnKotlinApp"
         tools:targetApi="31">
         <activity
+            android:name=".AlertsActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".ViewPagerActivity"
             android:exported="false">
             <meta-data

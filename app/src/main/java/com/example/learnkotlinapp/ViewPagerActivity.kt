@@ -1,6 +1,7 @@
 package com.example.learnkotlinapp
 
 import android.os.Bundle
+import androidx.activity.OnBackPressedCallback
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.viewpager2.adapter.FragmentStateAdapter
@@ -23,6 +24,17 @@ class ViewPagerActivity : AppCompatActivity() {
         TabLayoutMediator(binding.tabLayout, binding.pager) { tab, position ->
             tab.text = "${list!![position]}"
         }.attach()
+
+
+        onBackPressedDispatcher.addCallback(this, object : OnBackPressedCallback(true) {
+            override fun handleOnBackPressed() {
+                if (binding.pager.currentItem == 0) {
+                    onBackPressedDispatcher.onBackPressed();
+                } else {
+                    binding.pager.currentItem -= 1
+                }
+            }
+        })
     }
 
     class MyFragmentAdapter(private val arrayList: List<String>, fa: ViewPagerActivity) :
@@ -36,11 +48,4 @@ class ViewPagerActivity : AppCompatActivity() {
         }
     }
 
-    override fun onBackPressed() {
-        if (binding.pager.currentItem == 0) {
-            super.onBackPressed();
-        } else {
-            binding.pager.currentItem -= 1
-        }
-    }
 }

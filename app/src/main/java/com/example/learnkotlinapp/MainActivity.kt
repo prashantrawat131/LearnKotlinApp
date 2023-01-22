@@ -2,6 +2,7 @@ package com.example.learnkotlinapp
 
 import android.content.Intent
 import android.os.Bundle
+import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
@@ -19,27 +20,27 @@ class MainActivity : AppCompatActivity() {
 
         binding.tv.text = "Prashant";
 
-        binding.button.text="Go To next activity"
         binding.button.setOnClickListener {
-            Toast.makeText(
-                applicationContext,
-                "Hello",
-                Toast.LENGTH_LONG
-            ).show()
-
             val intent = Intent(this, ViewPagerActivity::class.java)
             startActivity(intent)
         }
 
+        binding.button2.setOnClickListener(View.OnClickListener { view ->
+            val intent = Intent(this, AlertsActivity::class.java)
+            startActivity(intent)
+        })
+
         binding.imageView.setImageDrawable(
             ContextCompat.getDrawable(
-                applicationContext,
-                R.drawable.run
+                applicationContext, R.drawable.run
             )
         )
 
         setUpRecyclerView()
 
+        Toast.makeText(
+            applicationContext, "Hello", Toast.LENGTH_LONG
+        ).show()
     }
 
     private fun setUpRecyclerView() {

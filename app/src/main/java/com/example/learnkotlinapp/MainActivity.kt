@@ -7,6 +7,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.learnkotlinapp.coroutine.CoroutineExampleActivity
 import com.example.learnkotlinapp.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -35,6 +36,10 @@ class MainActivity : AppCompatActivity() {
                 applicationContext, R.drawable.run
             )
         )
+
+        binding.button3.setOnClickListener(View.OnClickListener { view->
+            startActivity(Intent(this,CoroutineExampleActivity::class.java))
+        })
 
         setUpRecyclerView()
 

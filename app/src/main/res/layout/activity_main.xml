@@ -26,6 +26,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
+            android:textAllCaps="false"
             android:text="Go To View Pager Activity"
             app:layout_constraintTop_toBottomOf="@+id/tv" />
 
@@ -34,8 +35,19 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
+            android:textAllCaps="false"
             android:text="Go to dialogs activity"
             app:layout_constraintTop_toBottomOf="@+id/tv" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:textAllCaps="false"
+            android:text="Go to Coroutine Example"
+            app:layout_constraintTop_toBottomOf="@+id/tv" />
+
 
         <ImageView
             android:id="@+id/imageView"

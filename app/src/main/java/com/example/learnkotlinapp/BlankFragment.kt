@@ -7,18 +7,13 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.example.learnkotlinapp.databinding.FragmentBlankBinding
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
 private const val ARG_PARAM1_TEXT = "param1"
 private const val ARG_PARAM2 = "param2"
 
-/**
- * A simple [Fragment] subclass.
- * Use the [BlankFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
 class BlankFragment : Fragment() {
-    // TODO: Rename and change types of parameters
+
+//    New changes from Prashant.
+
     private var text: String? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {

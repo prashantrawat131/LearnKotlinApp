@@ -10,6 +10,9 @@ import androidx.fragment.app.DialogFragment
 import com.example.learnkotlinapp.databinding.CustomAlertLayoutBinding
 
 class CustomAlertFragment(private val fa: Activity) : DialogFragment() {
+
+    var x=22
+
     override fun onCreateDialog(savedInstanceState: Bundle?): Dialog {
         var builder = AlertDialog.Builder(fa);
 

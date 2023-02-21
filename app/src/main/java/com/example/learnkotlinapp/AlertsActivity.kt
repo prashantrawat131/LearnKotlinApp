@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.example.learnkotlinapp.databinding.ActivityAlertsBinding
 
 class AlertsActivity : AppCompatActivity() {
+    var a = 10
 
     lateinit var binding: ActivityAlertsBinding
 
@@ -16,6 +17,7 @@ class AlertsActivity : AppCompatActivity() {
         binding.button3.setOnClickListener { showSimpleAlert() }
 
         binding.button4.setOnClickListener { showCustomDialog() }
+
     }
 
     private fun showCustomDialog() {

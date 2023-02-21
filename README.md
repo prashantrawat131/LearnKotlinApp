@@ -1,3 +1,2 @@
-# LearnKotlinApp
-
-Changes by prashant.
+changes to the README.md file
+by adding a new line

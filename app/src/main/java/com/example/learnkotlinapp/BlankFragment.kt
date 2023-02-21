@@ -16,6 +16,8 @@ class BlankFragment : Fragment() {
 
     private var text: String? = null
 
+//    This is my change
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {
